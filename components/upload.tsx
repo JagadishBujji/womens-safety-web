@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import { useRef } from "react";
@@ -28,6 +29,7 @@ export default function UploadButton() {
         ref={fileInputRef}
         onChange={handleFileChange}
         className="hidden"
+        aria-label="Upload file"
       />
       <Button className=" cursor-pointer">Analyse</Button>
       <Button className=" cursor-pointer">Reset / Clear</Button>

@@ -77,50 +77,44 @@ function Toggle() {
           <div className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
               <div className="rounded-xl col-span-6">
-                {" "}
                 {Object.entries(violenceData).map(([section, values]) => (
                   <div key={section}>
                     <h3 className="text-lg font-semibold mb-2">{section}</h3>
-                    <Separator/>
+                    <Separator />
                     <div className="space-y-1 ">
                       {Object.entries(values).map(([label, value]) => (
-                        <>
-                          <div key={label} className="flex items-center gap-2">
-                            <span className="w-48">{label}</span>
-                            <div className="w-full bg-gray-200 h-3 rounded">
-                              <div
-                                className="h-3 bg-red-500 rounded"
-                                style={{ width: `${value}%` }}
-                              />
-                            </div>
-                            <span className="w-10 text-right">{value}%</span>
+                        <div key={label} className="flex items-center gap-2">
+                          <span className="w-48">{label}</span>
+                          <div className="w-full bg-gray-200 h-3 rounded">
+                            <div
+                              className="h-3 bg-red-500 rounded"
+                              style={{ width: `${value}%` }}
+                            />
                           </div>
-                        </>
+                          <span className="w-10 text-right">{value}%</span>
+                        </div>
                       ))}
                     </div>
                   </div>
                 ))}
               </div>
               <div className="rounded-xl col-span-6">
-                {" "}
                 {Object.entries(violenceData).map(([section, values]) => (
                   <div key={section}>
                     <h3 className="text-lg font-semibold mb-2">{section}</h3>
-                    <Separator/>
+                    <Separator />
                     <div className="space-y-1 ">
                       {Object.entries(values).map(([label, value]) => (
-                        <>
-                          <div key={label} className="flex items-center gap-2">
-                            <span className="w-48">{label}</span>
-                            <div className="w-full bg-gray-200 h-3 rounded">
-                              <div
-                                className="h-3 bg-red-500 rounded"
-                                style={{ width: `${value}%` }}
-                              />
-                            </div>
-                            <span className="w-10 text-right">{value}%</span>
+                        <div key={label} className="flex items-center gap-2">
+                          <span className="w-48">{label}</span>
+                          <div className="w-full bg-gray-200 h-3 rounded">
+                            <div
+                              className="h-3 bg-red-500 rounded"
+                              style={{ width: `${value}%` }}
+                            />
                           </div>
-                        </>
+                          <span className="w-10 text-right">{value}%</span>
+                        </div>
                       ))}
                     </div>
                   </div>

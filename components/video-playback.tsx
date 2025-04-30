@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useRef, useEffect, useState } from "react";
-import UploadButton from "./upload";
 
 interface Detection {
   time: number;
@@ -18,7 +17,7 @@ interface VideoProps {
   detections: Detection[];
 }
 
-const Video: React.FC<VideoProps> = ({ videoSrc, detections }) => {
+const VideoPlayback: React.FC<VideoProps> = ({ videoSrc, detections }) => {
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const [currentTime, setCurrentTime] = useState(0);
 
@@ -75,9 +74,9 @@ const Video: React.FC<VideoProps> = ({ videoSrc, detections }) => {
         </div>
 
         {/* Status */}
-        <div className="absolute bottom-2 left-2 text-green-500 text-sm bg-black/70 px-2 py-1 rounded">
+        {/* <div className="absolute bottom-2 left-2 text-green-500 text-sm bg-black/70 px-2 py-1 rounded">
           Online
-        </div>
+        </div> */}
 
         {/* Timestamp */}
         <div className="absolute top-2 right-2 text-white text-xs bg-black/70 px-2 py-1 rounded">
@@ -88,4 +87,4 @@ const Video: React.FC<VideoProps> = ({ videoSrc, detections }) => {
   );
 };
 
-export default Video;
+export default VideoPlayback;
