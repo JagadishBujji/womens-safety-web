@@ -1,4 +1,5 @@
 import { AppSidebar } from "@/components/app-sidebar";
+import Toggle from "@/components/toggle";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -14,9 +15,10 @@ import {
   SidebarProvider,
   SidebarTrigger,
 } from "@/components/ui/sidebar";
+import { TabsDemo } from "@/components/ui/tabs";
+
 import UploadButton from "@/components/ui/upload";
 import Video from "@/components/ui/video";
-import VideoPlayer from "@/components/ui/video";
 
 export default function Page() {
   return (
@@ -51,7 +53,7 @@ export default function Page() {
         </header>
         <div className="flex bg-white-400 flex-1 flex-col gap-4 p-4">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
-            <div className="rounded-xl col-span-9">
+            <div className="rounded-xl col-span-5">
               <div>
                 {" "}
                 <Video
@@ -63,9 +65,19 @@ export default function Page() {
                 <UploadButton />
               </div>
             </div>
-            <div className="col-span-3 flex flex-col justify-center gap-4"></div>
+            <div className="col-span-7 flex flex-col gap-4">
+              {/* <h3>
+                <b>Summary</b>
+              </h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at
+                lobortis nulla. Suspendisse ultricies tincidunt malesuada.
+                Pellentesque finibus sem elit, eu lobortis justo ultrices et.
+              </p>
+              <Toggle /> */}
+              <TabsDemo />
+            </div>
           </div>
-          <div className="bg-muted/50 min-h-[100vh] flex-1 rounded-xl md:min-h-min" />
         </div>
       </SidebarInset>
     </SidebarProvider>
