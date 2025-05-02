@@ -37,7 +37,7 @@ export function VersionSwitcher({
                 <GalleryVerticalEnd className="size-4" />
               </div>
               <div className="flex flex-col gap-0.5 leading-none">
-                <span className="font-medium">Women Safety Web</span>
+                <span className="font-medium">Violence Detection System</span>
                 {/* <span className="">v{selectedVersion}</span> */}
               </div>
               {/* <ChevronsUpDown className="ml-auto" /> */}

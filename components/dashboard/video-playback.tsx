@@ -13,7 +13,7 @@ interface Detection {
 }
 
 interface VideoProps {
-  videoSrc: string;
+  videoSrc: string | null;
   detections: Detection[];
 }
 
@@ -48,8 +48,13 @@ const VideoPlayback: React.FC<VideoProps> = ({ videoSrc, detections }) => {
     <>
       <div className="relative w-full max-w-4xl mx-auto border">
         {/* Video */}
-        <video ref={videoRef} controls autoPlay className="w-full rounded-lg">
-          <source src={videoSrc} type="video/mp4" />
+        <video
+          ref={videoRef}
+          controls
+          autoPlay={false}
+          className="w-full rounded-lg"
+        >
+          {videoSrc && <source src={videoSrc} type="video/mp4" />}
         </video>
 
         {/* Overlay */}
